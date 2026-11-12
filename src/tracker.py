@@ -44,4 +44,11 @@ class taskTracker:
         return task.status
 #list all tasks
   def list_all(self) -> list[Task]:
-    return self.tasks      
+    return self.tasks 
+
+#list all done tasks
+  def list_done(self)-> list[Task]:
+    return[task for task in self.tasks if task.status == "done"] 
+#list all todo tasks
+  def list_pending(self)-> list[Task]:
+    return[task for task in self.tasks if task.status == "pending"] 
